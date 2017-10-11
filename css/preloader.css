@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  margin-top: 10%;
+  top: 30vh;
   position: relative;
   width: 540px;
   margin: 0 auto;
