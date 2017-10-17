@@ -36,10 +36,13 @@ p {
 
 .light {
     position: absolute;
-    top: 30px;
+    /*top: 30px;*/
+    top: 0;
     left: 50px;
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
+    /*width: 140px;*/
+    /*height: 140px;*/
     margin: 0;
     padding: 0;
     opacity: 0.8;

@@ -6,11 +6,40 @@
 <body>
 <div class="wrapper">
   <div class="text">
-    <p>Loading</p>
+    <p id="loading">Loading</p>
   </div>
 
   <div class="light"></div>
   
   <div class="light two"></div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+
+      var eleven = moment().hours(23).seconds(0).minutes(0);
+
+      requestAnimationFrame(_loop);
+
+      function _loop() {
+        var _now = moment();
+        var _diff = eleven.diff(_now) / 1000;
+        var _seconds = Math.floor(_diff % 60);
+        _diff = _diff / 60;
+        var _minutes = Math.floor(_diff % 60);
+        var _hours = Math.floor(_diff / 60);
+
+        var _locale = {'minimumIntegerDigits': 2};
+        $('#loading').text(_hours.toLocaleString('en-US', _locale) + ':' +
+            _minutes.toLocaleString('en-US', _locale) + ':' +
+            _seconds.toLocaleString('en-US', _locale));
+
+        requestAnimationFrame(_loop);
+      }
+
+    });
+  </script>
 </div>
 </body>
