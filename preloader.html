@@ -19,17 +19,20 @@
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
 
-      var eleven = moment().hours(23).seconds(0).minutes(0);
+      var eleven = moment().hours(14).minutes(0).seconds(30);
 
       requestAnimationFrame(_loop);
 
       function _loop() {
         var _now = moment();
         var _diff = eleven.diff(_now) / 1000;
-        var _seconds = Math.floor(_diff % 60);
+
+        if(_diff < 0 ) { _diff = 0; }
+
+        var _seconds = parseInt(_diff % 60);
         _diff = _diff / 60;
-        var _minutes = Math.floor(_diff % 60);
-        var _hours = Math.floor(_diff / 60);
+        var _minutes = parseInt(_diff % 60);
+        var _hours = parseInt(_diff / 60);
 
         var _locale = {'minimumIntegerDigits': 2};
         $('#loading').text(_hours.toLocaleString('en-US', _locale) + ':' +
