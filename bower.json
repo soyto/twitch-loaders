@@ -1,0 +1,17 @@
+{
+  "name": "twitch-loaders",
+  "homepage": "https://github.com/soyto/twitch-loaders",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "textillate": "^0.4.0"
+  }
+}
