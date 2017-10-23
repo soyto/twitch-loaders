@@ -1,5 +1,5 @@
 $(function() {
-  let _resultHour = moment().hours(0).minutes(25).seconds(0);
+  let _resultHour = moment().hours(23).minutes(0).seconds(0);
   let _startingHour = moment();
   let _timeDiff = _resultHour.diff(_startingHour);
   let _lastIteration = null;
