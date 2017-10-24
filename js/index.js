@@ -4,9 +4,17 @@ $(function() {
   let _timeDiff = _resultHour.diff(_startingHour);
   let _lastIteration = null;
   const _texts = [
-    'Animando cosas que no esten animadas',
-    'Abduciendo alienigenas',
-    '000 111 000 101'
+      'Animando cosas que no esten animadas',
+      'Abduciendo alienigenas',
+      '000 111 000 101',
+      'Rizando bucles infinitos',
+      'Eliminando los WHERE de los DELETE FROM',
+      'Agregando mensajes emergentes al sistema',
+      'Agregando micropagos al sistema',
+      'Considerando seriamente la posibilidad de que estos mensajes sean completamente inutiles',
+      'Mostrando bit torcidos en la interfaz',
+      'Estableciendo el sistema como LFG (Looking For Graphics)',
+      'Buscando conexiones desconectadas'
   ];
 
   $('.texts span').textillate();
